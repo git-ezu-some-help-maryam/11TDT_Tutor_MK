@@ -1,44 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About 2TURING</title>
-    <link href="main.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>2TUTURING - Sign-Up</title>
+  <link rel="stylesheet" href="main.css">
 </head>
-<img src="images/books-1281581.jpg" alt="A bookshelf"
+ <!--Coding for the header. Including Title, navigation bar, and mascot-->
 <body>
+  <header class="header">
+    <div class="logo-container">
+      <h1>2turing</h1>
+      <img src="images/emoji-4827048_640.webp" class="mascot" alt="Mascot">
+    </div>
     <nav>
-        <ul>
-            <li><a href="home_page.html">2TURING</a></li>
-            <li><a href="about_page.html">About</a></li>
-            <li><a href="signup_page.html">Sign-Up</a></li>
-            <li><a href="subject_page.html">Subjects</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li><a href="home_page.html">Home</a></li>
+        <li><a href="subject_page.html">Services</a></li>
+        <li><a href="signup_page.html">Sign-Up</a></li>
+        <li><a href="about_page.html">About</a></li>
+      </ul>
     </nav>
+  </header>
+<!--Signing up to get 2Tured. Including java script-->
+  <section class="form-section">
+    <h2>Sign-up to get 2utored:</h2>
+    <img src="images/emoji-4827048_640.webp" class="mascot" alt="Mascot">
+    <form id="studentForm">
+      <label>Email:</label>
+      <input type="text" name="email" id="studentEmail" required>
+      <label>Phone number:</label>
+      <input type="text" name="phone" id="studentPhone" required>
+      <label>Year level:</label>
+      <input type="number" name="year" id="studentYear" required>
 
-    <h1>Sign-up to get 2utored:</h1>
-    <p>
-        Select subjects!<br>
-        Mathematics English Science Coding Languages Social Sciences<br>
-        Email:<br>
-        Phonenumber:<br>
-        Enter your details:<br>
-        Year level:<br>
-    </p>
-    
-    <h1>Sign-up to be a 2utor:</h1>
-    <p>
-        Select subjects!<br>
-        Mathematics English Science Coding Languages Social Sciences<br>
-        Email:<br>
-        Phonenumber:<br>
-        Enter your details:<br>
-        Year levels:<br>
-    </p>
-    
-    <p>
-        Please continue to our other pages to find out more!<br>
-        <a href="home_page.html">Back to home</a>
-    </p>
-    
+      <div class="checkbox-group">
+        <h4>Select your subjects:</h4>
+        <label><input type="checkbox" name="subjects" 
+          value="Mathematics"> Mathematics</label><br>
+        <label><input type="checkbox" name="subjects" 
+          value="English"> English</label><br>
+        <label><input type="checkbox" name="subjects" 
+          value="Science"> Science</label><br>
+        <label><input type="checkbox" name="subjects" 
+          value="Coding"> Coding</label><br>
+        <label><input type="checkbox" name="subjects"
+           value="Languages"> Languages</label><br>
+        <label><input type="checkbox" name="subjects"
+           value="Social Sciences"> Social Sciences</label>
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+<!--Signing up to be a 2utor, Including java scirpt.-->
+  <section class="form-section">
+    <h2>Sign-up to be a 2utor:</h2>
+    <img src="images/emoji-4827048_640.webp" class="mascot" alt="Mascot">
+    <form id="tutorForm">
+      <label>Email:</label>
+      <input type="text" name="email" id="tutorEmail" required>
+      <label>Phone number:</label>
+      <input type="text" name="phone" id="tutorPhone" required>
+      <label>Year level:</label>
+      <input type="number" name="year" id="tutorYear" required>
+
+      <div class="checkbox-group">
+        <h4>Select your subjects:</h4>
+        <label><input type="checkbox" name="subjects" 
+          value="Mathematics"> Mathematics</label><br>
+        <label><input type="checkbox" name="subjects" 
+          value="English"> English</label><br>
+        <label><input type="checkbox" name="subjects" 
+          value="Science"> Science</label><br>
+        <label><input type="checkbox" name="subjects" 
+          value="Coding"> Coding</label><br>
+        <label><input type="checkbox" name="subjects" 
+          value="Languages"> Languages</label><br>
+        <label><input type="checkbox" name="subjects" 
+          value="Social Sciences"> Social Sciences</label>
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+ <!--This is the footer for the website, including phone numbers, email, and a back to the homepage button-->
+  <footer class="footer-nav">
+    <p>📞 Call us: <a href="tel:+6441234567" style="color: #FFEFD0; 
+    text-decoration: underline;">+64 4 123 4567</a></p>
+    <p>📧 Email: <a href="mailto:hello@2tuturing.co.nz" style="color: #FFEFD0; 
+    text-decoration: underline;">hello@2tuturing.co.nz</a></p>
+    <p>Please continue to our other pages to find out more!</p>
+    <a href="home_page.html"><button>back to home</button></a>
+  </footer>
+<!--Java script for sign up boxes-->
+  <script>
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    function handleFormSubmit(event, emailId, phoneId, yearId) {
+      event.preventDefault();
+
+      const email = document.getElementById(emailId).value;
+      const phone = document.getElementById(phoneId).value;
+      const year = document.getElementById(yearId).value;
+
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      if (!/^\d{7,15}$/.test(phone)) {
+        alert("Please enter a valid phone number (7-15 digits).");
+        return;
+      }
+
+      if (year < 9 || year > 13) {
+        alert("Please enter a valid year level (9-13).");
+        return;
+      }
+
+      alert("Sign-up successful! Thank you.");
+      event.target.reset();
+    }
+
+    document.getElementById("studentForm").addEventListener("submit", function(e) {
+      handleFormSubmit(e, "studentEmail", "studentPhone", "studentYear");
+    });
+
+    document.getElementById("tutorForm").addEventListener("submit", function(e) {
+      handleFormSubmit(e, "tutorEmail", "tutorPhone", "tutorYear");
+    });
+  </script>
+</body>
+</html>

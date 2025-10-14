@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Subjects - 2TURING</title>
-    <link href="main.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>2TUTURING - Services</title>
+  <link rel="stylesheet" href="main.css">
 </head>
-<img src="images/books-1281581.jpg" alt="A bookshelf"
+ <!--Coding for the header. Including Title, navigation bar, and mascot-->
 <body>
+  <header class="header">
+    <div class="logo-container">
+      <h1>2turing</h1>
+      <img src="images/emoji-4827048_640.webp" class="mascot" alt="Mascot">
+    </div>
     <nav>
-        <ul>
-            <li><a href="home_page.html">2TURING</a></li>
-            <li><a href="about_page.html">About</a></li>
-            <li><a href="signup_page.html">Sign-Up</a></li>
-            <li><a href="subject_page.html">Subjects</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li><a href="home_page.html">Home</a></li>
+        <li><a href="subject_page.html">Services</a></li>
+        <li><a href="signup_page.html">Sign-Up</a></li>
+        <li><a href="about_page.html">About</a></li>
+      </ul>
     </nav>
-
-    <main>
-        <h1>Subjects We Tutor</h1>
-        
-        <section>
-            <h2>Languages</h2>
-            <img src="images/hallelujah-6516410.jpg" alt="A bookshelf">
-            <p>Get help with vocabulary, grammar, and conversation skills in French, Te Reo Māori, or any language you're learning at school.</p>
-        </section>
-
-        <section>
-            <h2>English</h2>
-            <img src="images/notebook-1840276.jpg" alt="A bookshelf">
-            <p>From essays to speeches, we'll help you develop strong reading and writing skills so you can express your ideas clearly.</p>
-        </section>
-
-        <section>
-            <h2>Mathematics</h2>
-            <img src="images/mathematics-6950767.jpg" alt="A bookshelf">
-            <p>Struggling with numbers or algebra? Get clear, friendly help to build your confidence and improve your problem-solving skills.</p>
-        </section>
-
-        <section>
-            <h2>Science</h2>
-            <img src="images/the-periodic-table-4273681.jpg" alt="A bookshelf">
-            <p>Break down tricky science topics like biology, chemistry, and physics into simple, easy-to-understand steps with our tutors.</p>
-        </section>
-
-        <section>
-            <h2>Social Sciences</h2>
-            <img src="images/berlin-5289802.jpg" alt="A bookshelf">
-            <p>Understand history, geography, and how societies work with clear, relatable explanations and support for assignments or exams.</p>
-        </section>
-
-        <section>
-            <h2>Coding</h2>
-            <img src="images/engineer-4904884.jpg" alt="A bookshelf">
-            <p>Start your coding journey or build on what you know with support in HTML, Python, JavaScript and more.</p>
-        </section>
-        <a href="home_page.html">Back to home</a>
-    </main>
+  </header>
+<!--Boxes showcasing the different subjects offered. Pictures and bios aswell-->
+  <section class="subject-cards">
+    <div class="subject-card">
+      <img src="images/mathematics-6950767.jpg" alt="Math">
+      <p><strong>Math</strong> - Build confidence with numbers or algebra.</p>
+    </div>
+    <div class="subject-card">
+      <img src="images/notebook-1840276.jpg" alt="English">
+      <p><strong>English</strong> - Strengthen reading and writing skills.</p>
+    </div>
+    <div class="subject-card">
+      <img src="images/the-periodic-table-4273681.jpg" alt="Sciences">
+      <p><strong>Sciences</strong> - Learn physics, chemistry,
+         and more step-by-step.</p>
+    </div>
+    <div class="subject-card">
+      <img src="images/engineer-4904884.jpg" alt="Coding">
+      <p><strong>Coding</strong> - Support in HTML, Python, 
+        and JavaScript.</p>
+    </div>
+    <div class="subject-card">
+      <img src="images/hallelujah-6516410.jpg" alt="Languages">
+      <p><strong>Languages</strong> - Learn French, Māori, and more.</p>
+    </div>
+    <div class="subject-card">
+      <img src="images/berlin-5289802.jpg" alt="Social Sciences">
+      <p><strong>Social Sciences</strong> - Learn history, geography, etc.</p>
+    </div>
+  </section>
+ <!--This is the footer for the website, including phone numbers, email, and a back to the homepage button-->
+  <footer class="footer-nav">
+  <p>📞 Call us: <a href="tel:+6441234567" style="color: #FFEFD0; 
+  text-decoration: underline;">+64 4 123 4567</a></p>
+  <p>📧 Email: <a href="mailto:hello@2tuturing.co.nz" style="color: #FFEFD0; 
+  text-decoration: underline;">hello@2tuturing.co.nz</a></p>
+  <p>Please continue to our other pages to find out more!</p>
+  <a href="home_page.html"><button>back to home</button></a>
+</footer>
 </body>
 </html>
